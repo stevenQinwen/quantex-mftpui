@@ -9,20 +9,23 @@ import pageMap from 'containers/page/pagemap';
 const pageMapList = [...pageMap.entries()]; // 获取所有页面的Map形式数组
 
 class RootComponent extends React.Component {
+
+  renderPageRoute = () => {
+    return pageMapList.map((item) => {
+      return <Route key={item[0]} path={item[0]} component={item[1]} />;
+    });
+  }
+
   render() {
     return (
       <Router history={hashHistory}>
         <Route path="/" component={Login} />
         <Route path="/app" component={App}>
           <IndexRoute component={EngineDesign}/>
-          {pageMapList.map((item) => {
-            return <Route key={item[0]} path={item[0]} component={item[1]} />;
-          })}
+          {this.renderPageRoute()}
         </Route>
         <Route path="/page" component={SinglePage}>
-          {pageMapList.map((item) => {
-            return <Route key={item[0]} path={item[0]} component={item[1]} />;
-          })}
+          {this.renderPageRoute()}
         </Route>
       </Router>
     );
