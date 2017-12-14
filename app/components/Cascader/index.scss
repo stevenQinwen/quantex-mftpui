@@ -1,0 +1,11 @@
+.root {
+  width: 100%;
+}
+
+:global {
+  .qx-cascader {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+  }
+}

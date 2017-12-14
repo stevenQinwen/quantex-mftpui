@@ -1,0 +1,128 @@
+$alert-zIndex: 1001; // z-index 需要高于蚂蚁组件的Modal, 当报错时, 不关闭Modal
+
+//
+@mixin layout($position, $top, $bottom, $left, $right) {
+  position: $position;
+  top: $top;
+  bottom: $bottom;
+  left: $left;
+  right: $right;
+}
+
+.dialog {
+  @include layout(absolute, 0, 0, 0, 0);
+
+  .mask {
+    @include layout(absolute, 0, 0, 0, 0);
+    z-index: $alert-zIndex - 1;
+    background-color: #444;
+    opacity: 0.6
+  }
+
+  .wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: $alert-zIndex;
+    pointer-events: none;
+
+    :global {
+      .alert {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 30px 30px 40px 72px;
+        border-radius: 4px;
+        background-color: $red-2;
+        pointer-events: all;
+      }
+
+      .alert-message {
+        max-height: 300px;
+        overflow: auto;
+      }
+
+      .alert-description {
+        > dl {
+          display: flex;
+          line-height: 1.6;
+          color: #666;
+          dt, dd {
+            display: inline-block;
+          }
+          dt {
+            min-width: 52px;
+          }
+          dd {
+            flex: 1;
+            padding-left: 8px;
+            max-height: 200px;
+            display: -webkit-box; // 超过两行的文本做省略处理
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            text-overflow:ellipsis;
+            overflow: hidden;
+          }
+        }
+      }
+
+      .alert-icon {
+        position: absolute;
+        top: 4px;
+        left: -30px;
+        font-size: 24px;
+      }
+
+      .alert-success {
+        border: 1px solid $green-2;
+        background-color: $green-1;
+
+        .alert-icon {
+          color: $green-6;
+        }
+      }
+
+      .alert-error {
+        border: 1px solid $red-2;
+        background-color: $red-1;
+
+        .alert-icon {
+          color: $red-6;
+        }
+      }
+
+      .alert-info {
+        border: 1px solid $blue-2;
+        background-color: $blue-1;
+
+        .alert-icon {
+          color: $blue-6;
+        }
+      }
+
+      .alert-warning {
+        border: 1px solid $yellow-2;
+        background-color: $yellow-1;
+
+        .alert-icon {
+          color: $yellow-6;
+        }
+      }
+    }
+    .body {
+      position: relative;
+      line-height: 2.5;
+    }
+
+    .footer {
+      margin-top: 30px;
+      text-align: right;
+      button:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+  }
+}

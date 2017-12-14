@@ -1,0 +1,14 @@
+:global {
+  .ant-select-selection--single {
+    height: 22px;
+  }
+  .qx-select {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    .ant-select { width: 100%; }
+    .ant-select-arrow {
+      display: block;
+    }
+  }
+}

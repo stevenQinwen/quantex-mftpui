@@ -1,0 +1,24 @@
+:global {
+  .ant-modal-mask {
+    position: absolute;
+  }
+  .ant-modal-wrap {
+    position: absolute;
+    text-align: center;
+    white-space: nowrap;
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      width: 0;
+    }
+    .ant-modal {
+      display: inline-block;
+      vertical-align: middle;
+      top: 0;
+      text-align: left;
+      padding-bottom: 0;
+    }
+  }
+}

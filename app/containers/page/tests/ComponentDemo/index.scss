@@ -1,0 +1,20 @@
+.root {
+  background-color: #fff!important;
+  code {
+    font-size: 16px;
+    color: #108ee9;
+    display: block;
+    background-color: #ecf6fd;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  :global {
+    .ant-tabs-tab-active {
+      background-color: #ecf6fd;
+    }
+    .ant-tabs-vertical > .ant-tabs-content {
+      overflow: auto!important;
+      padding-bottom: 20px;
+    }
+  }
+}

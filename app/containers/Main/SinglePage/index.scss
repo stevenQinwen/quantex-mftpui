@@ -1,0 +1,8 @@
+.single-page {
+  :global {
+    // 为单页面时, sidebar 侧滑栏高度通顶
+    .side-bar {
+      top: 0;
+    }
+  }
+}

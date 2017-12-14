@@ -1,0 +1,106 @@
+$column-title-bar-width: 310px;
+$layout-height: 600px;
+
+.custom-table-column {
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px solid $grey-4;
+  :global {
+    .ant-layout {
+      height: $layout-height;
+    }
+    .ant-layout-sider,
+    .ant-layout-content {
+      background-color: #fff;
+    }
+    .ant-layout-content {
+      min-width: 580px;
+      border-left: 1px solid $grey-4;
+      .ant-form-item {
+        display: inline-block;
+        width: 300px;
+        margin-right: 18px;
+      }
+    }
+    // listSelect 组件内容滚动
+    .list-select-content {
+      height: $layout-height - 66px;
+    }
+  }
+  .column-list {
+    max-height: $layout-height - 34px;
+    margin: -8px 4px 0 10px;
+    border-bottom: 1px solid $grey-4;
+    overflow: auto;
+  }
+
+  .text-muted {
+    color: $grey-6;
+  }
+  
+  .column {
+    height: 30px;
+    line-height: 29px;
+    border: 1px solid $grey-4;
+    border-bottom: 0;
+    &:last-child {
+      margin-bottom: 1px;
+    }
+    > span,
+    > div {
+      display: inline-block;
+    }
+    &-drag-bar {
+      width: 30px;
+      height: 30px;
+      font-size: 16px;
+      text-align: center;
+    }
+    &-title {
+      width: $column-title-bar-width;
+      &-bar {
+        display: inline-block;
+        // min-width: 60px;
+        max-width: $column-title-bar-width;
+        padding: 0 6px;
+        border-right: 1px solid $grey-4;
+        background-color: $grey-3;
+        box-sizing: border-box;
+        vertical-align: 1px;
+      }
+    }
+    &-width {
+      :global {
+        .ant-input-number {
+          display: inline-block;
+          width: 60px;
+          height: 20px;
+          line-height: 20px;
+          margin-right: 2px;
+          border: 1px solid #f1f1f1;
+        }
+      }
+    }
+    &-require {
+      margin-left: 6px;
+      color: $grey-6;
+    }
+    &-show {
+      width: 55px;
+      margin-left: 6px;
+    }
+  }
+
+  .area-blank {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .export-table {
+    min-height: $layout-height;
+    width: 500px;
+    margin: 0 auto;
+  }
+}

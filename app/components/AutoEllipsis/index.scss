@@ -1,0 +1,14 @@
+.root {
+  // 单行省略样式
+  display: inline-grid;
+  >div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+:global {
+  .tooltip-overlay {
+    word-break: break-all
+  }
+}

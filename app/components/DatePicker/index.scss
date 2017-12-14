@@ -1,0 +1,8 @@
+:global {
+  .qx-date-picker {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    .ant-calendar-picker { width: 100%; }
+  }
+}

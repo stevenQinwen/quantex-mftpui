@@ -1,0 +1,53 @@
+.root {
+  .work {
+    white-space:nowrap;
+    overflow: auto;
+    .item {
+      width: 250px;
+      display: inline-block;
+      border-radius: 4px;
+      overflow: hidden;
+      vertical-align: top;
+      &:not(:last-child) {
+        margin-right: 12px;
+      }
+      .head {
+        height: 30px;
+        line-height: 30px;
+        background-color: #108EE9;
+        padding: 0 12px;
+        color: #fff;
+        .icon {
+          float: right;
+          line-height: 30px;
+          transform: rotate(90deg);
+          cursor: pointer;
+        }
+      }
+      .body {
+        background-color: #EBEFF6;
+        padding: 12px;
+        li {
+          list-style: none;
+          background: #fff;
+          text-align: center;
+          line-height: 30px;
+          border-radius: 4px;
+          border: 1px solid #dedede;
+          cursor: pointer;
+          &:not(:last-child) {
+            margin-bottom: 8px;
+          }
+          &:hover {
+            background-color: #f7f7f7;
+          }
+        }
+      }
+    }
+  }
+  :global {
+    .overflow-initial {
+      overflow: initial!important;
+    }
+  }
+}
