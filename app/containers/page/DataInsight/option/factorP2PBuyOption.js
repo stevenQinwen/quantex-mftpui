@@ -20,7 +20,7 @@ export default function option(data, commonConfig) {
       }
     },
     legend: {
-      top: 45,
+      top: 65,
       data: commonConfig.buildLegendData(data[1])
     },
     tooltip: {
@@ -101,7 +101,7 @@ export default function option(data, commonConfig) {
       left: "3%",
       right: "4%",
       bottom: "40",
-      top: 80,
+      top: 95,
       containLabel: true
     },
     series: buildSeries(),

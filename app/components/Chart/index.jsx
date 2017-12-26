@@ -88,7 +88,7 @@ class ChartComponent extends React.Component {
   render() {
     const { url, site, params, option, className, ...pureProps } = this.props;
     const props = {
-      theme: 'walden',
+      theme: 'mftp',
       className: `${styles.root} react-echarts${className ? ' ' + className : ''}`,
       ref: (comp) => { this.reactEcharts = comp; },
       option: this.buildOption(),

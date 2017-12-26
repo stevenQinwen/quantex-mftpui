@@ -3,11 +3,11 @@ import { hashHistory, Link } from 'react-router';
 import { Row, Icon, Avatar, Layout, Menu } from 'antd';
 import { SideBar } from 'components';
 import { observer } from 'mobx-react';
-// import echarts from 'echarts/lib/echarts';
+import echarts from 'echarts/lib/echarts';
 import styles from './index.scss';
-// import echartsTheme from './infographic.json';
+import echartsTheme from './infographic.json';
 
-// echarts.registerTheme('mftp', echartsTheme);
+echarts.registerTheme('mftp', echartsTheme);
 
 const { Content, Sider } = Layout;
 
