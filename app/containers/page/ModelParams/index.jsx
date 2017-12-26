@@ -62,7 +62,7 @@ class ModelParams extends React.Component {
         render: (text, record) => {
           const content = (
             <div>
-              <div>{isBuySide ? '参数说明：申购次数 * ' : '参数名：'}{record.paramDetail}</div>
+              <div>参数说明：{record.beanNameDetail}</div>
               <div>{isBuySide ? '申购' : '赎回'}模型参考值：<NumberFormat value={text} precision={4} /></div>
             </div>
           );
