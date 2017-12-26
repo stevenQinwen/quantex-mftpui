@@ -21,7 +21,7 @@ const createProxyServer = (config) => {
  * @param url
  * @returns {*}
  */
-const getUrlOrigin = (url) => {
+const getUrlOrigin = (url = '') => {
   const reg = new RegExp(/^(http|https|ws|wss)?:\/\/[\w]+(\.[\w]+)+(:[0-9]+)?\//);
   return url.match(reg) && url.match(reg)[0];
 };

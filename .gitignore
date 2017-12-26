@@ -4,8 +4,6 @@ manifest.json
 app/_config/api.js
 
 # common file
-app/_config/dev/*
-app/_config/dist/*
 
 # Logs
 logs

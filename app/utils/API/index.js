@@ -149,24 +149,25 @@ class API {
    * @private
    */
   _handleHeader() {
-    const token = 'Bearer ' + userLocalStore.getItem('token');
-    const { id, userId, roleIds, companyId } = JSON.stringify(userLocalStore.getItem('userInfo'));
-    const mac = localStorage.getItem('mac');
-    const header = ApiConfig.isDebug ? {
-      'Authorization': token,
-      // TODO wait remove
-      'Jwt-User-Info': {
-        id,
-        userId,
-        roleIds,
-        companyId
-      }
-    } : {
-      'Authorization': token
-    };
-    // 添加 mac 地址头部供后端校验登陆设备，如果不存在 mac 地址则不加
-    mac && (header.mac = mac);
-    return header;
+    return {};
+    // const token = 'Bearer ' + userLocalStore.getItem('token');
+    // const { id, userId, roleIds, companyId } = JSON.stringify(userLocalStore.getItem('userInfo'));
+    // const mac = localStorage.getItem('mac');
+    // const header = ApiConfig.isDebug ? {
+    //   'Authorization': token,
+    //   // TODO wait remove
+    //   'Jwt-User-Info': {
+    //     id,
+    //     userId,
+    //     roleIds,
+    //     companyId
+    //   }
+    // } : {
+    //   'Authorization': token
+    // };
+    // // 添加 mac 地址头部供后端校验登陆设备，如果不存在 mac 地址则不加
+    // mac && (header.mac = mac);
+    // return header;
   }
 
   /**

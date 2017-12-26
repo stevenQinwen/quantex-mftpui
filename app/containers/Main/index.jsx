@@ -3,11 +3,11 @@ import { hashHistory, Link } from 'react-router';
 import { Row, Icon, Avatar, Layout, Menu } from 'antd';
 import { SideBar } from 'components';
 import { observer } from 'mobx-react';
-import echarts from 'echarts/lib/echarts';
+// import echarts from 'echarts/lib/echarts';
 import styles from './index.scss';
-import echartsTheme from './infographic.json';
+// import echartsTheme from './infographic.json';
 
-echarts.registerTheme('infographic', echartsTheme);
+// echarts.registerTheme('mftp', echartsTheme);
 
 const { Content, Sider } = Layout;
 
@@ -54,7 +54,7 @@ class MainContainerComponent extends React.Component {
               <Menu.Item key="/app/ModelPerformance"><Icon type="setting" />模型表现</Menu.Item>
               <Menu.Item key="/app/ModelParams"><Icon type="setting" />模型参数</Menu.Item>
               <Menu.Item key="/app/UserAnalysis"><Icon type="setting" />用户分析</Menu.Item>
-              <Menu.Item key="/app/FeatureExploration"><Icon type="setting" />数据洞察</Menu.Item>
+              <Menu.Item key="/app/DataInsight"><Icon type="setting" />数据洞察</Menu.Item>
             </Menu>
           </Sider>
           <Layout style={{ padding: 20 }}>

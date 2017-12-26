@@ -8,6 +8,7 @@ export { default as ACollapse } from './ACollapse';
 export { default as APopconfirm } from './APopconfirm';
 export { default as ATabs } from './ATabs';
 export { default as Cascader } from './Cascader';
+export { default as Chart } from './Chart';
 export { default as CheckboxGroup } from './CheckboxGroup';
 export { default as ContextMenu } from './ContextMenu';
 export { default as DatePicker } from './DatePicker';
@@ -53,6 +54,7 @@ export const ComponentDict = {
   ATabs: 'ATabs',
   AUpload: 'AUpload',
   Cascader: 'Cascader',
+  Chart: 'Chart',
   CheckboxGroup: 'CheckboxGroup',
   ContextMenu: 'ContextMenu',
   DatePicker: 'DatePicker',

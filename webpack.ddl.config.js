@@ -3,6 +3,7 @@ const webpack = require('webpack');
 
 const vendors = [
   'antd',
+  'echarts',
   'lodash',
   'mobx',
   'mobx-react',

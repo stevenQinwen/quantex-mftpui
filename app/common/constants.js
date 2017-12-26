@@ -37,5 +37,17 @@ const POSITION_FROZEN = {
   UNFROZEN: 2  // 解冻
 };
 
+// 申购、赎回
+const BUY_REDEEM = {
+  BUY: 'buy',
+  REDEEM: 'redeem'
+};
 
-export { FORMITEM_LAYOUT, PAGINATION, TABLE_COLUMN_WIDTH, ASSET_TYPE, POSITION_FROZEN };
+// 比较方式：次数、金额
+const TIME_AMOUNT = {
+  TIME: 'times',
+  AMOUNT: 'amounts'
+};
+
+
+export { FORMITEM_LAYOUT, PAGINATION, TABLE_COLUMN_WIDTH, ASSET_TYPE, POSITION_FROZEN, BUY_REDEEM, TIME_AMOUNT };
